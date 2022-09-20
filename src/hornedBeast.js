@@ -6,9 +6,10 @@ import React from "react";
         render() {
             return (
                 <div>
-                    <h3> Picture 1</h3>
-                    <img title="Horned Beast 1" src="https://c8.alamy.com/comp/MTN8D5/horned-beast-illustration-MTN8D5.jpg" alt="Horned best" />
-
+                    <h3>{this.props.title}</h3>
+                    <img title={this.props.title} src={this.props.src} alt={this.props.alt}/>
+                    <p>{this.props.description}</p>
+                   
                 </div>
             );
         }
