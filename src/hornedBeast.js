@@ -17,7 +17,7 @@ class HornedBeast extends React.Component {
   handleClick =() =>{
     this.setState({
       liked: this.state.liked + 1,
-      discription: this.state.discription + "😍" +(this.state.liked),
+      discription: this.props.discription + "😍:" +(this.state.liked+1),
     });
   }
 render() {
