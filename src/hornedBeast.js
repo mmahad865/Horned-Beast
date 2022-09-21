@@ -10,6 +10,7 @@ class HornedBeast extends React.Component {
     super(props)
     this.state ={
       discription: props.discription,
+      src: props.src,
       liked: 0,
     };
   }
@@ -24,11 +25,11 @@ render() {
   return (
     <>
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={this.props.src} onClick={this.handleClick}/>
+      <Card.Img variant="top" src={this.state.src} />
       <Card.Body>
         <Card.Title>{this.props.Title}</Card.Title>
         <Card.Text className="fst-italic">{this.state.discription} </Card.Text>
-        <Button variant="primary">❤️ here</Button>
+        <Button variant="primary" onClick={this.handleClick}>❤️ here</Button>
       </Card.Body>
     </Card>
     </>
