@@ -17,7 +17,7 @@ class HornedBeast extends React.Component {
   handleClick =() =>{
     this.setState({
       liked: this.state.liked + 1,
-      discription: this.state.discription + "😍" +(this.state.liked),
+      discription: this.props.discription + "😍:" +(this.state.liked+1),
     });
   }
 render() {
@@ -28,7 +28,7 @@ render() {
       <Card.Body>
         <Card.Title>{this.props.Title}</Card.Title>
         <Card.Text className="fst-italic">{this.state.discription} </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">❤️ here</Button>
       </Card.Body>
     </Card>
     </>
