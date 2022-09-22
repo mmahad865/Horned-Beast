@@ -1,3 +1,26 @@
+Lab 04
+Number and name of feature: Feature 1. Filter by Numbers of Horn
+
+
+
+Estimate of time needed to complete: 1hr?
+
+Start time: 1:00
+
+Finish time: 3:04
+
+Actual time needed to complete: 2hr
+
+
+
+
+
+
+
+
+
+
+Lab 03
 Number and name of feature: Feature #1: Display a Modal
 
 
