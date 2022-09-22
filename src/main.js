@@ -1,20 +1,38 @@
 import React from "react";
 import HornedBeast from "./HornedBeast";
 import data from "./assets/data.json";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
+class Main extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      beasts: data,
+    };
+  }
+ 
 
-class Main extends React.Component{
-    render() {
-        return (
-            <div>
-              {data.map(beast => {
-                return <HornedBeast key={beast._id} src={beast.image_url} title={beast.title} discription={beast.description} keyword={beast.keyword} horns={beast.horns} />
-              })} 
-              
-                
+  render() {
+    return (
+      <>
+ 
 
-            </div>
-        );
-    }
+        <Row xs={2} md={4} className="justify-content-md-center">
+          {this.state.beasts.map((beast) => (
+            <Col>
+              <HornedBeast
+                src={beast.image_url}
+                alt={beast.title}
+                title={beast.title}
+                description={beast.description}
+              />
+            </Col>
+          ))}
+        </Row>
+      </>
+    );
+  }
 }
+
 export default Main;
