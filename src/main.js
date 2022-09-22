@@ -22,7 +22,7 @@ class Main extends React.Component {
       <>
  
 
-        <Row >
+        <Row xs={2} md={4} className="justify-content-md-center">
           {this.state.beasts.map((beast) => (
             <Col>
               <HornedBeast

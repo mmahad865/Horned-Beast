@@ -1,17 +1,23 @@
-import './App.css';
 import React from 'react';
+import './App.css';
 import Header from './Header';
+import Footer from './Footer';
 import Main from './Main';
-import Fotter from './Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
-function App() {
+
+
+
+class App extends React.Component {
+render() {
   return (
-    <div className="App">
-    <Header />
-    <Main />
-    <Fotter />
-    </div>
+    <>
+   < Header/>
+   <Main/>
+   <Footer/>
+    </>
   );
 }
+}
+
 
 export default App;

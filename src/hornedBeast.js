@@ -7,11 +7,13 @@ class HornedBeast extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      Description: this.props.description,
+      Title: this.props.title,
       liked: 0,
       Src: this.props.src,
       Alt: this.props.alt,
-      Title: this.props.title,
-      Description: this.props.description,
+      
+     
     };
   }
 
@@ -24,7 +26,7 @@ class HornedBeast extends React.Component {
 
   render() {
     return (
-      <Card style={{ margin: "0 auto", width: "100%", height: "70%" }}>
+      <Card style={{ margin: "0 auto", width: "70%", height: "100%" }}>
         <Card.Img
           variant="top"
           src={this.props.src}
