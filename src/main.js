@@ -1,5 +1,5 @@
 import React from "react";
-import HornedBeast from "./HornedBeast";
+import HornedBeast from "./HornedBeast.js";
 import data from "./assets/data.json";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -50,9 +50,10 @@ class Main extends React.Component {
         </Form>
 
         <Row xs={2} md={4} className="justify-content-md-center">
-          {this.state.beasts.map((beast) => (
+          {this.state.beasts.map((beast, idx) => (
             <Col>
               <HornedBeast
+                key={idx}
                 src={beast.image_url}
                 alt={beast.title}
                 title={beast.title}
